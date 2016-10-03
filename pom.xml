@@ -28,7 +28,7 @@
 
     <groupId>info.schnatterer.logback-android-utils</groupId>
     <artifactId>logback-android-utils</artifactId>
-    <version>1.0.0</version>
+    <version>1.0.1-SNAPSHOT</version>
     <packaging>jar</packaging>
 
     <name>logback-android-utils</name>
