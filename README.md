@@ -9,3 +9,19 @@ A small library that conveniently provides additional features for logback-andro
 The central logback-android logic is encapsulated in [Logs](src/main/java/info/schnatterer/logbackandroidutils/Logs.java)
  
 For an example see [logback-android-demo](https://github.com/schnatterer/logback-android-demo/).
+
+You can use it via JitPack:
+Add the following maven repository to your build.gradle
+
+	allprojects {
+		repositories {
+			...
+			maven { url "https://jitpack.io" }
+		}
+	}
+Then add the actual dependency
+
+	dependencies {
+	        compile 'com.github.schnatterer:logback-android-utils:1.0.0'
+	}
+    
