@@ -60,6 +60,16 @@
                 </configuration>
             </plugin>
             <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-release-plugin</artifactId>
+                <version>2.5.3</version>
+                <configuration>
+                    <arguments>-Prelease</arguments>
+                    <!-- Make our tags look like e.g. "1.0.1" -->
+                    <tagNameFormat>@{project.version}</tagNameFormat>
+                </configuration>
+            </plugin>
+            <plugin>
                 <!-- Automatically applies license headers to files and fails build if one is missing. -->
                 <groupId>com.mycila</groupId>
                 <artifactId>license-maven-plugin</artifactId>
