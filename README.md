@@ -9,6 +9,7 @@ A small library that conveniently provides additional features for logback-andro
 The central logback-android logic is encapsulated in [Logs](src/main/java/info/schnatterer/logbackandroidutils/Logs.java)
  
 For an example see [logback-android-demo](https://github.com/schnatterer/logback-android-demo/).
+For a real-life example see [nusic](https://github.com/schnatterer/nusic).
 
 You can use it via JitPack:
 Add the following maven repository to your build.gradle
