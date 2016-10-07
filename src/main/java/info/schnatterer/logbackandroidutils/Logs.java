@@ -66,8 +66,7 @@ public final class Logs {
      * @param level the log level to set
      */
     public static void setRootLogLevel(String level) {
-        Logger root = (Logger) LoggerFactory
-            .getLogger(org.slf4j.Logger.ROOT_LOGGER_NAME);
+        Logger root = getRootLogger();
         root.info("root.getLevel(): {}", root.getLevel().toString());
         root.info("Setting level to {}", level);
         root.setLevel(Level.toLevel(level));
@@ -162,8 +161,7 @@ public final class Logs {
      */
     public static void setThresholdFilterLevel(String logLevel, String logAppenderName, Context context) {
         /* Find appender */
-        Logger root = (Logger) LoggerFactory
-            .getLogger(org.slf4j.Logger.ROOT_LOGGER_NAME);
+        Logger root = getRootLogger();
         Appender<ILoggingEvent> appender = root.getAppender(logAppenderName);
         if (appender == null) {
             warnAndToast(context, root,
@@ -184,6 +182,15 @@ public final class Logs {
                     root.getLevel(), logAppenderName, logLevel)
             );
         }
+    }
+
+    /**
+     * @return the root logger
+     */
+    private static Logger getRootLogger() {
+        return (Logger) LoggerFactory.getLogger(
+            // Under certain circumstances under android the root logger is null. Try to work around
+            org.slf4j.Logger.ROOT_LOGGER_NAME != null ? org.slf4j.Logger.ROOT_LOGGER_NAME : "ROOT");
     }
 
     /**
