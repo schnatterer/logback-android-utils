@@ -60,14 +60,14 @@ import static org.mockito.Mockito.when;
  * verbose output.
  */
 @RunWith(RobolectricTestRunner.class)
-@Config(manifest = Config.NONE, emulateSdk = 18)
+@Config(manifest = Config.NONE, sdk = 23)
 public class LogsTest {
 
     public static final URL LOGBACK_XML = LogsTest.class.getClassLoader().getResource("logback.xml");
 
     static {
-        /* Thanks to gradle's "sourceFolderJavaResources" folder logback is not found on the class path
-         * automatically. So, set it explicitly...
+        /* For some reasons, logback.xml is not found on the class path automatically.
+         * So, set it explicitly...
          */
         System.setProperty("logback.configurationFile", LOGBACK_XML.toString());
     }
