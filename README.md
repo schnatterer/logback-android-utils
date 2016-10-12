@@ -26,3 +26,9 @@ Then add the actual dependency
 	        compile 'com.github.schnatterer:logback-android-utils:1.0.0'
 	}
     
+
+# Jenkins
+Running [Jenkinsfile](Jenkinsfile) with the [pipeline plugin](https://wiki.jenkins-ci.org/display/JENKINS/Pipeline+Plugin) (tested with version 2.4) requires
+- A JDK defined as  Jenkins tool (see [Jenkinsfile](Jenkinsfile) for name of JDK tool)
+- Maven defined as Jenkins tool (see [Jenkinsfile](Jenkinsfile) for name of Maven tool)
+- Optional: You can add a build parameter `RECIPIENTS` that contains a comma-separated list of all email recipients
