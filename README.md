@@ -1,10 +1,9 @@
 logback-android-utils
 ====================
 
- [![Build Status](https://jenkins.schnatterer.info/job/logback-android-utils/badge/icon)](https://jenkins.schnatterer.info/job/logback-android-utils/)
+[![Build Status](https://travis-ci.org/schnatterer/logback-android-utils.svg?branch=master)](https://travis-ci.org/schnatterer/logback-android-utils)
  [![JitPack](https://jitpack.io/v/schnatterer/logback-android-utils.svg)](https://jitpack.io/#schnatterer/logback-android-utils)
  [![License](https://img.shields.io/github/license/schnatterer/logback-android-utils.svg)](LICENSE)
- [<img alt="powered by openshift" align="right" src="https://www.openshift.com/images/logos/powered_by_openshift.png"/>](https://www.openshift.com/)
  
 A small library that conveniently provides additional features for logback-android:
 
